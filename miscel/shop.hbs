@@ -1,0 +1,31 @@
+
+{{!-- You cant rnu expressions in handlebars templates --}}
+<main>
+    {{#if hasProducts}}
+        <div class="grid">
+            {{#each prods}}
+            <article class="card product-item">
+                <header class="card__header">
+                    <h1 class="product__title">{{this.title}}</h1>
+                    <div class="card__image">
+                            <img src="https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png" alt="image">  
+                        <div class="card__content">   
+                            <h2 class="product__price">
+                                $12.99
+                            </h2>
+                            <p class="product__description">
+                                A nice product-item
+                            </p>
+                        </div>
+                        <div class="card__actions">
+                            <button class="btn">Add to cart</button>
+                        </div>
+                    </div>
+                </header>
+            </article>
+            {{/each}}
+        </div>
+    {{ else }}
+        <p>No Products</p>
+    {{/if}}
+</main>
